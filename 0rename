@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Specify the directory
+dir="/root/c++"
+
+# Loop over all files in the directory
+for file in "$dir"/*; do
+  # Get the base name of the file
+  base=$(basename "$file")
+  # Rename the file
+  mv "$file" "$dir/0$base"
+done
+
